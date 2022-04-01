@@ -44,20 +44,20 @@ class Login:
                    bg="#6162FF", fg="white").place(x=450, y=475, width=100, height=40)
             Label(text="Drag Files here", font=("Goudy old style", 15, "bold"), fg="black", bg="white").place(
                 x=480, y=250)
-        
+
 
         def even_t_page():
             Register = Frame(self.root, bg="white", )
             Register.place(x=330, y=150, width=500, height=400)
-            Label(text="Even", font=("Impact", 35, "bold"), fg="#6162FF", bg="white").place(x=550, y=180)
+            Label(text="Even", font=("Impact", 35, "bold"), fg="#6162FF", bg="white").place(x=500, y=180)
             Button(cursor="hand2", text="Return", bd=0, command=main_page, font=("Goudy old style", 15),
                    bg="#6162FF", fg="white").place(x=600, y=475, width=100, height=40)
             Button(cursor="hand2", text="Confirm", bd=0, command=main_page, font=("Goudy old style", 15),
                    bg="#6162FF", fg="white").place(x=450, y=475, width=100, height=40)
             Label(text="Drag Files here", font=("Goudy old style", 15, "bold"), fg="black", bg="white").place(
-                x=500, y=250)
+                x=480, y=250)
 
-        def idk_t_page():
+        def idf_t_page():
             Register = Frame(self.root, bg="white", )
             Register.place(x=330, y=150, width=500, height=400)
             Label(text="IDK", font=("Impact", 35, "bold"), fg="#6162FF", bg="white").place(x=500, y=180)
@@ -79,13 +79,13 @@ class Login:
             self.name.place(x=470, y=310)
 
             def create_folder():
-                parent_dir = rf"\\mnhazfs\nonword\halbanot\Both"
+                parent_dir = rf"\\testdomain\nonword\halbanot\Both"
                 directory_name = self.name.get()
                 path = os.path.join(parent_dir, directory_name)
                 os.mkdir(path)
                 directory_whoto = self.whoto.get()
 
-                parent_dir2 = rf"\\mnhazfs\nonword\halbanot\Both\{directory_name}"
+                parent_dir2 = rf"\\testdomain\nonword\halbanot\Both\{directory_name}"
                 path1 = os.path.join(parent_dir2, directory_whoto)
                 os.mkdir(path1)
                 both_t_page()
@@ -113,16 +113,16 @@ class Login:
             self.name.place(x=470, y=310)
 
             def create_folder():
-                parent_dir = rf"\\mnhazfs\nonword\halbanot\Even"
+                parent_dir = rf"\\testdomain\nonword\halbanot\Even"
                 directory_name = self.name.get()
                 path = os.path.join(parent_dir, directory_name)
                 os.mkdir(path)
                 directory_whoto = self.whoto.get()
 
-                parent_dir2 = rf"\\mnhazfs\nonword\halbanot\Even\{directory_name}"
+                parent_dir2 = rf"\\testdomain\nonword\halbanot\Even\{directory_name}"
                 path1 = os.path.join(parent_dir2, directory_whoto)
                 os.mkdir(path1)
-                both_t_page()
+                even_t_page()
 
             Label(text="Even", font=("Impact", 35, "bold"), fg="#6162FF", bg="white").place(x=550, y=180)
             Button(cursor="hand2", text="Return", bd=0, command=main_page, font=("Goudy old style", 15),
@@ -141,22 +141,18 @@ class Login:
             self.whoto.place(x=470, y=390)
             self.name = Entry(font=("Goudy old style", 15), bg="#E7E6E6")
             self.name.place(x=470, y=310)
+
             def create_folder():
-                parent_dir = rf"\\mnhazfs\nonword\halbanot\IDF"
+                parent_dir = rf"\\testdomain\nonword\halbanot\IDF"
                 directory_name = self.name.get()
                 path = os.path.join(parent_dir, directory_name)
                 os.mkdir(path)
                 directory_whoto = self.whoto.get()
 
-                parent_dir2 = rf"\\mnhazfs\nonword\halbanot\IDF\{directory_name}"
+                parent_dir2 = rf"\\testdomain\nonword\halbanot\IDF\{directory_name}"
                 path1 = os.path.join(parent_dir2, directory_whoto)
                 os.mkdir(path1)
-                both_t_page()
-
-
-
-
-
+                idf_t_page()
 
 
         main_page()
